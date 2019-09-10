@@ -1,0 +1,44 @@
+Java开发环境
+1.Java运行过程
+  1.1编译期：Java源文件，经过编译。生成.class文件
+  1.2运行期：JVM加载.class并运行.class
+  特点：跨平台，一次编程到处使用
+JVM:Java虚拟机 加载.class并运行.class
+    JRE:Java运行环境 除了包含JVM外，还包含运行java程序所必须的环境
+    JRE = JVM + java  系统类库
+    JDK:java开发工具包
+      jdk  = JRE+编译、运行等命令工具
+2、数据类型
+ 2.1 int整型，4个字节，-21多亿到21多亿
+         整数默认是int型，但不能超范围，超范围则编译错误
+     long整型，8个字节 需要在后面加上L或l
+     double浮点型，8个字节，浮点数默认为double
+     char字符型，2个字节，采用unicode编码格式，一个字符对应一个码，表现的形式是字符char,
+         但实质上是码int(0-65535),特殊字符需通过\转义
+     boolean：布尔型，1个字节
+ 2.2 基本类型从小到大
+     byte,short,int,long,float,double
+          char
+3、结构
+   3.1 while:先判断后执行，有可能一次都不执行
+       do..while:先执行后判断。至少执行一次
+       for:应用率高，固定次数循环
+   3.2 break:跳出循环，continue:跳过循环体中剩余语句而进入下一次循环
+   3.3 程序 = 算法 + 数据结构
+       1）算法：解决问题的流程/步骤(顺序、分支、循环)
+       2）数据结构：将数据按照某种特定的结构来保存
+             数怎么存
+             设计良好的、合理的数据结构会导致好的算法
+   3.4 数组
+       a.相同数据类型元素的集合
+       b.数组是一种数据类型(引用类型)
+       c.数组的声明：
+         int[] arr = new int[10];
+       d.数组的初始化：
+         int[] arr = new int[3];
+         int[] arr = {1,4,7}
+       e.数组的复制：System.arraycopy(a,1,a1,0,4)
+         int[] a1 = Arrays.copyOf(a,6)
+         a = Arrays.copyOf(a,a.length+1)
+       f.数组排序
+         Arrays.sort(arr);//升序、效率高
